@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Week1-Dimitar Markov\Client.csproj", "{BC76A37C-7B9C-425C-93DF-6152EEF123BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskScheduling", "DiskScheduling\DiskScheduling.csproj", "{1242E5B9-5F6F-4F4E-8D24-C82DD79552AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{6190B897-B537-4BD9-87C4-091A7B762010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC76A37C-7B9C-425C-93DF-6152EEF123BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC76A37C-7B9C-425C-93DF-6152EEF123BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC76A37C-7B9C-425C-93DF-6152EEF123BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC76A37C-7B9C-425C-93DF-6152EEF123BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1242E5B9-5F6F-4F4E-8D24-C82DD79552AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1242E5B9-5F6F-4F4E-8D24-C82DD79552AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1242E5B9-5F6F-4F4E-8D24-C82DD79552AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1242E5B9-5F6F-4F4E-8D24-C82DD79552AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6190B897-B537-4BD9-87C4-091A7B762010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6190B897-B537-4BD9-87C4-091A7B762010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6190B897-B537-4BD9-87C4-091A7B762010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6190B897-B537-4BD9-87C4-091A7B762010}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
