@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LotteryParticipantForm_ConcreteObserver_
+namespace Observer_Pattern
 {
     static class Program
     {

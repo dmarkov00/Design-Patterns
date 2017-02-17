@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CCF34B8-2A8F-4847-97D3-F27508CC066F}</ProjectGuid>
+    <ProjectGuid>{EC12A416-C811-41B5-8D9C-410915A6AD6D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LotteryParticipantForm_ConcreteObserver_</RootNamespace>
-    <AssemblyName>LotteryParticipantForm%28ConcreteObserver%29</AssemblyName>
+    <RootNamespace>Observer_Pattern</RootNamespace>
+    <AssemblyName>Observer Pattern</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,10 +52,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ILottery.cs" />
+    <Compile Include="IParticipant.cs" />
+    <Compile Include="Lottery.cs" />
+    <Compile Include="Participant1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Participant1.Designer.cs">
+      <DependentUpon>Participant1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Participant1.resx">
+      <DependentUpon>Participant1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,16 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Lottery%28Object%29\Lottery%28Object%29.csproj">
-      <Project>{3aac6d12-d38d-4816-89a9-ecf52cc6a9bc}</Project>
-      <Name>Lottery%28Object%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LotteryParticipant%28Observer%29\LotteryParticipantion%28Observer%29.csproj">
-      <Project>{6bb9ee7e-41b2-4cb4-9bbc-1df00fecf2e3}</Project>
-      <Name>LotteryParticipantion%28Observer%29</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

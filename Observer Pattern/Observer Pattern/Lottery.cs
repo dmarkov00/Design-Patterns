@@ -1,12 +1,10 @@
 ﻿using System;
-using LotteryParticipant_Observer_;
 using System.Collections.Generic;
 
-namespace Lottery_Object_
+namespace Observer_Pattern
 {
-    public class Lottery : ILottery
+    public  class Lottery : ILottery
     {
-
         private List<IParticipant> listOfParticipants;
         private List<int> Numbers { get; set; }
         public Lottery()

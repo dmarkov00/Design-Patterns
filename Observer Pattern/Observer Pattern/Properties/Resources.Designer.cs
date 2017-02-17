@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LotteryParticipantForm_ConcreteObserver_.Properties
+namespace Observer_Pattern.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace LotteryParticipantForm_ConcreteObserver_.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LotteryParticipantForm_ConcreteObserver_.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Observer_Pattern.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

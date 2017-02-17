@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lottery_Object_.Properties
+namespace Observer_Pattern.Properties
 {
 
 

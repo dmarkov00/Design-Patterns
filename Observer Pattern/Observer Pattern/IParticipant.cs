@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LotteryParticipant_Observer_
+namespace Observer_Pattern
 {
     public interface IParticipant
     {
