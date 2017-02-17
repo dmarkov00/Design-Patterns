@@ -14,7 +14,7 @@ namespace Observer_Pattern
         private Lottery lottery;
         private void DrawNumbersBtn_Click(object sender, System.EventArgs e)
         {
-            newestNumbersDrawnLabel.Text = "";
+            newestNumbersDrawnLabel.Text = "The newest numbers drawn: ";
             List<int> numbers = lottery.GenerateRandomNumbers();
             foreach (int num in numbers)
             {
@@ -26,6 +26,36 @@ namespace Observer_Pattern
         {
             Form participant1 = new Participant1(lottery);
             participant1.Show();
+        }
+
+        private void StartParticipant2Btn_Click(object sender, System.EventArgs e)
+        {
+            Form participant2 = new Participant2(lottery);
+            participant2.Show();
+        }
+
+        private void ScheduleTimerBtn_Click(object sender, System.EventArgs e)
+        {
+            
+            timer1.Interval = (int)numericUpDown1.Value * 60000;
+            timer1.Start();
+            
+
+        }
+
+        private void timer1_Tick(object sender, System.EventArgs e)
+        {
+            newestNumbersDrawnLabel.Text = "The newest numbers drawn: ";
+            List<int> numbers = lottery.GenerateRandomNumbers();
+            foreach (int num in numbers)
+            {
+                newestNumbersDrawnLabel.Text += num + ",";
+            }
+        }
+
+        private void stopTimerBtn_Click(object sender, System.EventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }

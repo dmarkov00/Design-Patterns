@@ -1,26 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Observer_Pattern
 {
-    public partial class Participant1 : Form, IParticipant
+    public partial class Participant2 : Form, IParticipant
     {
-        public Participant1(Lottery lottery)
+        public Participant2(Lottery lottery)
         {
             InitializeComponent();
             Lottery = lottery;
-            this.Name = "Grandma Milthreat";
+            this.Name = "Grandpa Vlada";
             label2.Text = this.Name;
-
             Lottery.Register(this);
-
         }
         public Lottery Lottery { get; set; }
         List<int> selectedNumbers = new List<int>();
@@ -32,6 +24,16 @@ namespace Observer_Pattern
             {
                 nmbrsCurrentlyDrawnLabel.Text += item.ToString() + ", ";
             }
+        }
+
+        private void Participant2SubscribeBtn_Click(object sender, EventArgs e)
+        {
+            Lottery.Register(this);
+        }
+
+        private void Participant2UnsubscribeBtn_Click(object sender, EventArgs e)
+        {
+            Lottery.Unregister(this);
         }
 
         private void chooseNumberBtn_Click(object sender, EventArgs e)
@@ -48,17 +50,5 @@ namespace Observer_Pattern
             chooseNumberBtn.Visible = false;
             label1.Visible = false;
         }
-
-        private void Participant1SubscribeBtn_Click(object sender, EventArgs e)
-        {
-            Lottery.Register(this);
-        }
-
-        private void Participant1UnsubscribeBtn_Click(object sender, EventArgs e)
-        {
-            Lottery.Unregister(this);
-        }
-
-      
     }
 }

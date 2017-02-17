@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.newestNumbersDrawnLabel = new System.Windows.Forms.Label();
             this.ScheduleTimerBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.topicLabel = new System.Windows.Forms.Label();
             this.StartParticipant1Btn = new System.Windows.Forms.Button();
             this.StartParticipant2Btn = new System.Windows.Forms.Button();
+            this.stopTimerBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,12 +65,13 @@
             this.ScheduleTimerBtn.TabIndex = 13;
             this.ScheduleTimerBtn.Text = "Schedule timer";
             this.ScheduleTimerBtn.UseVisualStyleBackColor = true;
+            this.ScheduleTimerBtn.Click += new System.EventHandler(this.ScheduleTimerBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(410, 221);
+            this.label4.Location = new System.Drawing.Point(455, 222);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
@@ -120,7 +124,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(352, 223);
+            this.numericUpDown1.Location = new System.Drawing.Point(397, 222);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(50, 22);
@@ -155,12 +159,28 @@
             this.StartParticipant2Btn.TabIndex = 18;
             this.StartParticipant2Btn.Text = "Start Participant2";
             this.StartParticipant2Btn.UseVisualStyleBackColor = true;
+            this.StartParticipant2Btn.Click += new System.EventHandler(this.StartParticipant2Btn_Click);
+            // 
+            // stopTimerBtn
+            // 
+            this.stopTimerBtn.Location = new System.Drawing.Point(185, 288);
+            this.stopTimerBtn.Name = "stopTimerBtn";
+            this.stopTimerBtn.Size = new System.Drawing.Size(135, 56);
+            this.stopTimerBtn.TabIndex = 19;
+            this.stopTimerBtn.Text = "Stop timer";
+            this.stopTimerBtn.UseVisualStyleBackColor = true;
+            this.stopTimerBtn.Click += new System.EventHandler(this.stopTimerBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 480);
+            this.Controls.Add(this.stopTimerBtn);
             this.Controls.Add(this.StartParticipant2Btn);
             this.Controls.Add(this.StartParticipant1Btn);
             this.Controls.Add(this.topicLabel);
@@ -193,6 +213,8 @@
         private System.Windows.Forms.Label topicLabel;
         private System.Windows.Forms.Button StartParticipant1Btn;
         private System.Windows.Forms.Button StartParticipant2Btn;
+        private System.Windows.Forms.Button stopTimerBtn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

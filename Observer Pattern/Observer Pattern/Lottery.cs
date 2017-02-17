@@ -33,10 +33,11 @@ namespace Observer_Pattern
             var rand = new Random();
             Numbers = new List<int>();
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Numbers.Add(rand.Next(20));
             }
+            // We notify all the observers after new numbers are generated
             NotifyObserver(Numbers);
             return Numbers;
 
