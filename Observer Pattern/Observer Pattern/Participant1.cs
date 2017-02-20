@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Observer_Pattern
 {
+
+    /// ///////////////////////////////////////////////////////////////////////
+
+    // The comments in this class are also valid for Participant2
+
+    /// ///////////////////////////////////////////////////////////////////////
+
     public partial class Participant1 : Form, IParticipant
     {
         public Participant1(Lottery lottery)
@@ -25,6 +26,11 @@ namespace Observer_Pattern
         public Lottery Lottery { get; set; }
         List<int> selectedNumbers = new List<int>();
 
+        /// <summary>
+        /// Implenetation of update method from IParticipant.
+        /// Receives the newly generated numbers and displays it in the form
+        /// </summary>
+        /// <param name="numbers"></param>
         public void Update(List<int> numbers)
         {
             nmbrsCurrentlyDrawnLabel.Text = "Numbers currently drawn:  ";
@@ -49,10 +55,13 @@ namespace Observer_Pattern
             label1.Visible = false;
         }
 
+        // Passing the current Observer for registering
         private void Participant1SubscribeBtn_Click(object sender, EventArgs e)
         {
             Lottery.Register(this);
         }
+
+        // Passing the current Observer for removing
 
         private void Participant1UnsubscribeBtn_Click(object sender, EventArgs e)
         {
