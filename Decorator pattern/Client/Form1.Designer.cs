@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.costLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MercedesBtn
@@ -59,7 +61,7 @@
             // 
             // FerrariBtn
             // 
-            this.FerrariBtn.Location = new System.Drawing.Point(49, 148);
+            this.FerrariBtn.Location = new System.Drawing.Point(49, 189);
             this.FerrariBtn.Name = "FerrariBtn";
             this.FerrariBtn.Size = new System.Drawing.Size(220, 40);
             this.FerrariBtn.TabIndex = 2;
@@ -95,24 +97,44 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(46, 368);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 17);
+            this.label1.Size = new System.Drawing.Size(184, 17);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Cost of the last ordered car";
+            this.label1.Text = "Cost of the last ordered car:";
             // 
             // costLabel
             // 
             this.costLabel.AutoSize = true;
             this.costLabel.Location = new System.Drawing.Point(258, 368);
             this.costLabel.Name = "costLabel";
-            this.costLabel.Size = new System.Drawing.Size(69, 17);
+            this.costLabel.Size = new System.Drawing.Size(12, 17);
             this.costLabel.TabIndex = 6;
-            this.costLabel.Text = "costLabel";
+            this.costLabel.Text = " ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Price: 100000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Price: 200000";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(630, 437);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.costLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -136,6 +158,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label costLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

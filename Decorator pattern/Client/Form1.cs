@@ -20,14 +20,11 @@ namespace Client
             {
                 switch (item.ToString())
                 {
-                    case "Bumper - 2500":
-                        car = new Bumper(car); 
-                    case "Spoiler - 1000":
-                        car = new Bumper(car);
-                    case "Sport seats - 1400":
-                        car = new Bumper(car); break;
+                    case "Bumper - 2500": car = new Bumper(car); break;
+                    case "Spoiler - 1000": car = new Spoiler(car); break;
+                    case "Sport seats - 1400": car = new SportSeats(car); break;
                 }
-      
+
             }
 
             costLabel.Text = car.CalculateCost().ToString();
@@ -36,14 +33,25 @@ namespace Client
         private void FerrariBtn_Click(object sender, System.EventArgs e)
         {
             car = new Ferrari();
+            foreach (var item in AccessoriesListBox.SelectedItems)
+            {
+                switch (item.ToString())
+                {
+                    case "Bumper - 2500": car = new Bumper(car); break;
+                    case "Spoiler - 1000": car = new Spoiler(car); break;
+                    case "Sport seats - 1400": car = new SportSeats(car); break;
+                }
+
+            }
+
+            costLabel.Text = car.CalculateCost().ToString();
         }
 
         private void PopulateListBox()
         {
             List<ICar> accesoriesList = new List<ICar>();
-            //accesoriesList.Add(new Bumper());
-
-            AccessoriesListBox.Items.Add(new Bumper());
         }
+
+     
     }
 }
