@@ -2,7 +2,10 @@
 using Cars;
 namespace Accessories
 {
-
+    /// <summary>
+    /// The decorator class used to be be inherited from the concrete decorators
+    /// for bigger flexability
+    /// </summary>
     public abstract class CarAccessory : ICar
     {
         public CarAccessory(ICar car)
@@ -10,10 +13,8 @@ namespace Accessories
             this.car = car;
         }
         protected ICar car;
-        public virtual double CalculateCost()
-        {
-            return car.CalculateCost();
-        }
+        public abstract double CalculateCost();
+        
 
     }
 }

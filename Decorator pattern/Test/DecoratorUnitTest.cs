@@ -8,6 +8,31 @@ namespace Test
     public class DecoratorUnitTest
     {
         [TestMethod]
+        public void Decorate_With_Bumber()
+        {
+            double expectedResult = 102500;
+            ICar merc = new Mercedes(); // +100000
+            merc = new Bumper(merc); // +2500
+            Assert.AreEqual(expectedResult, merc.CalculateCost());
+        }
+        [TestMethod]
+        public void Decorate_With_Spoiler()
+        {
+            double expectedResult = 101000;
+            ICar merc = new Mercedes(); // +100000
+            merc = new Spoiler(merc); // +1000
+            Assert.AreEqual(expectedResult, merc.CalculateCost());
+        }
+        [TestMethod]
+        public void Decorate_With_SportSeats()
+        {
+            double expectedResult = 101400;
+            ICar merc = new Mercedes(); // +100000
+            merc = new SportSeats(merc); // +1400
+            Assert.AreEqual(expectedResult, merc.CalculateCost());
+        }
+
+        [TestMethod]
         public void AddDecorations_Multuple_Times()
         {
             double expectedResult = 207700;

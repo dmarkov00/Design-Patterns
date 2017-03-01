@@ -13,6 +13,11 @@ namespace Client
         }
         private ICar car;
 
+        /// <summary>
+        /// Creating different car based on the clicked button
+        /// Loops through all the items in the listbox and
+        /// decorates the newly created object
+        /// </summary>
         private void MercBtn_Click(object sender, System.EventArgs e)
         {
             car = new Mercedes();
@@ -30,6 +35,11 @@ namespace Client
             costLabel.Text = car.CalculateCost().ToString();
         }
 
+        /// <summary>
+        /// Creating different car based on the clicked button
+        /// Loops through all the items in the listbox and
+        /// decorates the newly created object
+        /// </summary>
         private void FerrariBtn_Click(object sender, System.EventArgs e)
         {
             car = new Ferrari();
@@ -46,12 +56,5 @@ namespace Client
 
             costLabel.Text = car.CalculateCost().ToString();
         }
-
-        private void PopulateListBox()
-        {
-            List<ICar> accesoriesList = new List<ICar>();
-        }
-
-     
     }
 }
