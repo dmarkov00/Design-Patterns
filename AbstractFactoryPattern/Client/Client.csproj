@@ -79,6 +79,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FastVehicles\FastVehicles.csproj">
+      <Project>{81cba21b-6041-47b3-820b-1c0742a6b181}</Project>
+      <Name>FastVehicles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RacingGame\RacingGameFactory.csproj">
+      <Project>{1cbe0d49-36fc-4462-a06f-910731a4cade}</Project>
+      <Name>RacingGameFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SlowVehicles\SlowVehicles.csproj">
+      <Project>{4970f98f-53e9-4307-ac9c-f007791b7fa2}</Project>
+      <Name>SlowVehicles</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
