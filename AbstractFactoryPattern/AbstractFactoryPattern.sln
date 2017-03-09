@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowVehicles", "SlowVehicle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastVehicles", "FastVehicles\FastVehicles.csproj", "{81CBA21B-6041-47B3-820B-1C0742A6B181}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{59C97869-B833-4962-8094-D4A744EFD7FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{81CBA21B-6041-47B3-820B-1C0742A6B181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81CBA21B-6041-47B3-820B-1C0742A6B181}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81CBA21B-6041-47B3-820B-1C0742A6B181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C97869-B833-4962-8094-D4A744EFD7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C97869-B833-4962-8094-D4A744EFD7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C97869-B833-4962-8094-D4A744EFD7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C97869-B833-4962-8094-D4A744EFD7FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
