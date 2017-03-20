@@ -4,9 +4,9 @@ namespace VisitorPattern
 {
     public class Chicken : Meat
     {
-        public override void Acccept(IVisitor visitor)
+        public override string Acccept(IVisitor visitor)
         {
-            visitor.Visit(this);
+           return visitor.Visit(this);
         }
     }
 }

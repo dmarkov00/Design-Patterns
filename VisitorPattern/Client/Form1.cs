@@ -16,8 +16,8 @@ namespace Client
         {
             visitor = new OvenVisitor();
 
-            listBox1.Items.Add(visitor.Visit(chicken));
-            listBox1.Items.Add(visitor.Visit(beef));
+            listBox1.Items.Add(beef.Acccept(visitor));
+            listBox1.Items.Add(chicken.Acccept(visitor));
 
         }
 
@@ -25,8 +25,8 @@ namespace Client
         {
             visitor = new PanVisitor();
 
-            listBox1.Items.Add(visitor.Visit(chicken));
-            listBox1.Items.Add(visitor.Visit(beef));
+            listBox1.Items.Add(beef.Acccept(visitor));
+            listBox1.Items.Add(chicken.Acccept(visitor));
         }
     }
 }
