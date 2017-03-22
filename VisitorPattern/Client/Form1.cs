@@ -18,7 +18,6 @@ namespace Client
 
             listBox1.Items.Add(beef.Acccept(visitor));
             listBox1.Items.Add(chicken.Acccept(visitor));
-
         }
 
         private void button2_Click(object sender, EventArgs e)
