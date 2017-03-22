@@ -11,16 +11,44 @@ namespace Tests
 
     public class CommandPatternTests
     {
-        private ISoundDevice soundDevice;
+        private ISoundDevice television = TelevisionRemote.GetSoundDevice();
+        private ISoundDevice speakers = SpeakersRemote.GetSoundDevice();
+
         private ICommand command;
+        string result = "";
         [TestMethod]
         public void TurnTelevisionOn()
         {
-            soundDevice = TelevisionRemote.GetSoundDevice();
-            //command = new TurnTelevisionOn(soundDevice);
-
+            command = new TurnTelevisionOn(television);
             string result = command.Execute();
             Assert.AreEqual("The TELEVISION is ON", result);
+        }
+        [TestMethod]
+        public void TurnTelevisionVolumeUp_Twice()
+        {
+            command = new TurnTelevisionVolumeUp(television);
+            result = command.Execute();
+            result = command.Execute();
+
+            Assert.AreEqual("The volume of the TELEVISION is turned UP to 2", result);
+        }
+        [TestMethod]
+        public void TurnSpeakersOff()
+        {
+            command = new TurnSpeakersOff(speakers);  
+            result = command.Execute();
+
+            Assert.AreEqual("The speakers are OFF", result);
+        }
+        [TestMethod]
+        public void TurnSpeakersVolumeDown_3_Times()
+        {
+            command = new TurnSpeakersVolumeDown(speakers);
+            result = command.Execute();
+            result = command.Execute();
+            result = command.Execute();
+
+            Assert.AreEqual("The volume of the SPEAKERS is turned DOWN to -3", result);
         }
     }
 }

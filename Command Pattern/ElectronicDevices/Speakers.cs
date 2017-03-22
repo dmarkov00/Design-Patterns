@@ -18,13 +18,13 @@ namespace SoundDevices
         public string VolumeDown()
         {
             _volume--;
-            return "The volume of the SPEAKERS are turned DOWN to " + _volume;
+            return "The volume of the SPEAKERS is turned DOWN to " + _volume;
         }
 
         public string VolumeUp()
         {
             _volume++;
-            return "The volume of the SPEAKERS are turned UP to " + _volume;
+            return "The volume of the SPEAKERS is turned UP to " + _volume;
         }
     }
 }
