@@ -31,8 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.logListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnBoatRacing = new System.Windows.Forms.Button();
-            this.btnCarRacing = new System.Windows.Forms.Button();
+            this.BoatRadioBtn = new System.Windows.Forms.RadioButton();
+            this.CarRadioBtn = new System.Windows.Forms.RadioButton();
+            this.BtnStartRace = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,33 +68,48 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Log: ";
             // 
-            // btnBoatRacing
+            // BoatRadioBtn
             // 
-            this.btnBoatRacing.Location = new System.Drawing.Point(82, 113);
-            this.btnBoatRacing.Name = "btnBoatRacing";
-            this.btnBoatRacing.Size = new System.Drawing.Size(170, 41);
-            this.btnBoatRacing.TabIndex = 3;
-            this.btnBoatRacing.Text = "Start boat racing game";
-            this.btnBoatRacing.UseVisualStyleBackColor = true;
-            this.btnBoatRacing.Click += new System.EventHandler(this.btnBoatRacing_Click);
+            this.BoatRadioBtn.AutoSize = true;
+            this.BoatRadioBtn.Location = new System.Drawing.Point(82, 104);
+            this.BoatRadioBtn.Name = "BoatRadioBtn";
+            this.BoatRadioBtn.Size = new System.Drawing.Size(140, 21);
+            this.BoatRadioBtn.TabIndex = 5;
+            this.BoatRadioBtn.TabStop = true;
+            this.BoatRadioBtn.Text = "Boat racing game";
+            this.BoatRadioBtn.UseVisualStyleBackColor = true;
+            this.BoatRadioBtn.CheckedChanged += new System.EventHandler(this.BoatRadioBtn_CheckedChanged);
             // 
-            // btnCarRacing
+            // CarRadioBtn
             // 
-            this.btnCarRacing.Location = new System.Drawing.Point(289, 113);
-            this.btnCarRacing.Name = "btnCarRacing";
-            this.btnCarRacing.Size = new System.Drawing.Size(157, 42);
-            this.btnCarRacing.TabIndex = 4;
-            this.btnCarRacing.Text = "Start car racing game";
-            this.btnCarRacing.UseVisualStyleBackColor = true;
-            this.btnCarRacing.Click += new System.EventHandler(this.btnCarRacing_Click);
+            this.CarRadioBtn.AutoSize = true;
+            this.CarRadioBtn.Location = new System.Drawing.Point(249, 104);
+            this.CarRadioBtn.Name = "CarRadioBtn";
+            this.CarRadioBtn.Size = new System.Drawing.Size(133, 21);
+            this.CarRadioBtn.TabIndex = 6;
+            this.CarRadioBtn.TabStop = true;
+            this.CarRadioBtn.Text = "Car racing game";
+            this.CarRadioBtn.UseVisualStyleBackColor = true;
+            this.CarRadioBtn.CheckedChanged += new System.EventHandler(this.CarRadioBtn_CheckedChanged);
+            // 
+            // BtnStartRace
+            // 
+            this.BtnStartRace.Location = new System.Drawing.Point(608, 158);
+            this.BtnStartRace.Name = "BtnStartRace";
+            this.BtnStartRace.Size = new System.Drawing.Size(125, 43);
+            this.BtnStartRace.TabIndex = 7;
+            this.BtnStartRace.Text = "Start Race";
+            this.BtnStartRace.UseVisualStyleBackColor = true;
+            this.BtnStartRace.Click += new System.EventHandler(this.BtnStartRace_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 545);
-            this.Controls.Add(this.btnCarRacing);
-            this.Controls.Add(this.btnBoatRacing);
+            this.Controls.Add(this.BtnStartRace);
+            this.Controls.Add(this.CarRadioBtn);
+            this.Controls.Add(this.BoatRadioBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.logListBox);
             this.Controls.Add(this.label1);
@@ -109,8 +125,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox logListBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBoatRacing;
-        private System.Windows.Forms.Button btnCarRacing;
+        private System.Windows.Forms.RadioButton BoatRadioBtn;
+        private System.Windows.Forms.RadioButton CarRadioBtn;
+        private System.Windows.Forms.Button BtnStartRace;
     }
 }
 
