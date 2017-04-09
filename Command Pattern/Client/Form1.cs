@@ -17,49 +17,41 @@ namespace Client
         private ISoundDevice television = TelevisionRemote.GetSoundDevice();
         private ISoundDevice speakers = SpeakersRemote.GetSoundDevice();
 
-        private ICommand command;
+        private ICommand tvCommand;
+        private ICommand speakersCommand;
+
         string deviceFeedback = "";
-    
-        private void SpeakersRemoteHandler(object sender, EventArgs e)
-        {
 
-            string clickedButtonName = ((Button)sender).Name;
-            switch (clickedButtonName)
-            {
-                case "OnSpeakersRemoteBtn":
-                    command = new TurnSpeakersOn(speakers);
-                    deviceFeedback = command.Execute();
-                    break;
-                case "OffSpeakersRemoteBtn":
-                    command = new TurnSpeakersOff(speakers);
-                    deviceFeedback = command.Execute();
-                    break;
-
-                case "VolumeUpSpeakersRemoteBtn":
-                    command = new TurnSpeakersVolumeUp(speakers);
-                    deviceFeedback = command.Execute();
-                    break;
-                case "VolumeDownSpeakersRemoteBtn":
-                    command = new TurnSpeakersVolumeDown(speakers);
-                    deviceFeedback = command.Execute();
-                    break;
-            }
-            listBox1.Items.Add(deviceFeedback);
-        }
-
+        // Handlers for executing buttons
         private void BtnExecuteTVCommand_Click(object sender, EventArgs e)
         {
-            deviceFeedback = command.Execute();
-            listBox1.Items.Add(deviceFeedback);
+            if(tvCommand != null)
+            {
+                // Execute command and also assign result 
+                deviceFeedback = tvCommand.Execute();
 
+                listBox1.Items.Add(deviceFeedback);
+            }         
+        }
+        private void BtnExecuteSpeakersCommand_Click(object sender, EventArgs e)
+        {
+            if(speakersCommand != null)
+            {
+                // Execute command and also assign result 
+                deviceFeedback = speakersCommand.Execute();
+
+                listBox1.Items.Add(deviceFeedback);
+            }
+            
         }
 
+        // TV radio buttons handlers
         private void OnTvRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                command = new TurnTelevisionOn(television);
+                tvCommand = new TurnTelevisionOn(television);
             }
         }
         private void OffTvRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +59,7 @@ namespace Client
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                command = new TurnTelevisionOff(television);
+                tvCommand = new TurnTelevisionOff(television);
             }
         }
         private void VolumeUpTvRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -75,7 +67,7 @@ namespace Client
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                command = new TurnTelevisionVolumeUp(television);
+                tvCommand = new TurnTelevisionVolumeUp(television);
             }
         }
         private void VolumeDownTVRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -83,7 +75,41 @@ namespace Client
             RadioButton rb = sender as RadioButton;
             if (rb.Checked)
             {
-                command = new TurnTelevisionVolumeDown(television);
+                tvCommand = new TurnTelevisionVolumeDown(television);
+            }
+        }
+
+        // Speakers radio buttons handlers
+        private void OnSpeakersRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                speakersCommand = new TurnSpeakersOn(speakers);
+            }
+        }
+        private void OffSpeakersRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                speakersCommand = new TurnSpeakersOff(speakers);
+            }
+        }
+        private void VolumeUpSpeakersRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                speakersCommand = new TurnSpeakersVolumeUp(speakers);
+            }
+        }
+        private void VolumeDownSpeakersRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            if (rb.Checked)
+            {
+                speakersCommand = new TurnSpeakersVolumeDown(speakers);
             }
         }
     }

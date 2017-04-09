@@ -31,10 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.VolumeDownSpeakersRemoteBtn = new System.Windows.Forms.Button();
-            this.VolumeUpSpeakersRemoteBtn = new System.Windows.Forms.Button();
-            this.OffSpeakersRemoteBtn = new System.Windows.Forms.Button();
-            this.OnSpeakersRemoteBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.OnTvRadioButton = new System.Windows.Forms.RadioButton();
@@ -42,6 +38,11 @@
             this.VolumeUpTvRadioButton = new System.Windows.Forms.RadioButton();
             this.VolumeDownTVRadioButton = new System.Windows.Forms.RadioButton();
             this.BtnExecuteTVCommand = new System.Windows.Forms.Button();
+            this.VolumeDownSpeakersRadioButton = new System.Windows.Forms.RadioButton();
+            this.VolumeUpSpeakersRadioButton = new System.Windows.Forms.RadioButton();
+            this.OffSpeakersRadioButton = new System.Windows.Forms.RadioButton();
+            this.OnSpeakersRadioButton = new System.Windows.Forms.RadioButton();
+            this.BtnExecuteSpeakersCommand = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,51 +73,16 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.VolumeDownSpeakersRemoteBtn);
-            this.panel2.Controls.Add(this.VolumeUpSpeakersRemoteBtn);
-            this.panel2.Controls.Add(this.OffSpeakersRemoteBtn);
-            this.panel2.Controls.Add(this.OnSpeakersRemoteBtn);
+            this.panel2.Controls.Add(this.BtnExecuteSpeakersCommand);
+            this.panel2.Controls.Add(this.VolumeDownSpeakersRadioButton);
+            this.panel2.Controls.Add(this.VolumeUpSpeakersRadioButton);
+            this.panel2.Controls.Add(this.OffSpeakersRadioButton);
+            this.panel2.Controls.Add(this.OnSpeakersRadioButton);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(274, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(125, 366);
             this.panel2.TabIndex = 1;
-            // 
-            // VolumeDownSpeakersRemoteBtn
-            // 
-            this.VolumeDownSpeakersRemoteBtn.Location = new System.Drawing.Point(26, 197);
-            this.VolumeDownSpeakersRemoteBtn.Name = "VolumeDownSpeakersRemoteBtn";
-            this.VolumeDownSpeakersRemoteBtn.Size = new System.Drawing.Size(80, 23);
-            this.VolumeDownSpeakersRemoteBtn.TabIndex = 9;
-            this.VolumeDownSpeakersRemoteBtn.Text = "Volume -";
-            this.VolumeDownSpeakersRemoteBtn.UseVisualStyleBackColor = true;
-            // 
-            // VolumeUpSpeakersRemoteBtn
-            // 
-            this.VolumeUpSpeakersRemoteBtn.Location = new System.Drawing.Point(26, 156);
-            this.VolumeUpSpeakersRemoteBtn.Name = "VolumeUpSpeakersRemoteBtn";
-            this.VolumeUpSpeakersRemoteBtn.Size = new System.Drawing.Size(80, 23);
-            this.VolumeUpSpeakersRemoteBtn.TabIndex = 8;
-            this.VolumeUpSpeakersRemoteBtn.Text = "Volume +";
-            this.VolumeUpSpeakersRemoteBtn.UseVisualStyleBackColor = true;
-            // 
-            // OffSpeakersRemoteBtn
-            // 
-            this.OffSpeakersRemoteBtn.Location = new System.Drawing.Point(26, 118);
-            this.OffSpeakersRemoteBtn.Name = "OffSpeakersRemoteBtn";
-            this.OffSpeakersRemoteBtn.Size = new System.Drawing.Size(75, 23);
-            this.OffSpeakersRemoteBtn.TabIndex = 7;
-            this.OffSpeakersRemoteBtn.Text = "Off";
-            this.OffSpeakersRemoteBtn.UseVisualStyleBackColor = true;
-            // 
-            // OnSpeakersRemoteBtn
-            // 
-            this.OnSpeakersRemoteBtn.Location = new System.Drawing.Point(26, 80);
-            this.OnSpeakersRemoteBtn.Name = "OnSpeakersRemoteBtn";
-            this.OnSpeakersRemoteBtn.Size = new System.Drawing.Size(75, 23);
-            this.OnSpeakersRemoteBtn.TabIndex = 6;
-            this.OnSpeakersRemoteBtn.Text = "On";
-            this.OnSpeakersRemoteBtn.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -188,11 +154,69 @@
             // 
             this.BtnExecuteTVCommand.Location = new System.Drawing.Point(10, 258);
             this.BtnExecuteTVCommand.Name = "BtnExecuteTVCommand";
-            this.BtnExecuteTVCommand.Size = new System.Drawing.Size(110, 46);
+            this.BtnExecuteTVCommand.Size = new System.Drawing.Size(101, 61);
             this.BtnExecuteTVCommand.TabIndex = 10;
             this.BtnExecuteTVCommand.Text = "Execute TV comand";
             this.BtnExecuteTVCommand.UseVisualStyleBackColor = true;
             this.BtnExecuteTVCommand.Click += new System.EventHandler(this.BtnExecuteTVCommand_Click);
+            // 
+            // VolumeDownSpeakersRadioButton
+            // 
+            this.VolumeDownSpeakersRadioButton.AutoSize = true;
+            this.VolumeDownSpeakersRadioButton.Location = new System.Drawing.Point(9, 199);
+            this.VolumeDownSpeakersRadioButton.Name = "VolumeDownSpeakersRadioButton";
+            this.VolumeDownSpeakersRadioButton.Size = new System.Drawing.Size(85, 21);
+            this.VolumeDownSpeakersRadioButton.TabIndex = 13;
+            this.VolumeDownSpeakersRadioButton.TabStop = true;
+            this.VolumeDownSpeakersRadioButton.Text = "Volume -";
+            this.VolumeDownSpeakersRadioButton.UseVisualStyleBackColor = true;
+            this.VolumeDownSpeakersRadioButton.CheckedChanged += new System.EventHandler(this.VolumeDownSpeakersRadioButton_CheckedChanged);
+            // 
+            // VolumeUpSpeakersRadioButton
+            // 
+            this.VolumeUpSpeakersRadioButton.AutoSize = true;
+            this.VolumeUpSpeakersRadioButton.Location = new System.Drawing.Point(9, 158);
+            this.VolumeUpSpeakersRadioButton.Name = "VolumeUpSpeakersRadioButton";
+            this.VolumeUpSpeakersRadioButton.Size = new System.Drawing.Size(88, 21);
+            this.VolumeUpSpeakersRadioButton.TabIndex = 12;
+            this.VolumeUpSpeakersRadioButton.TabStop = true;
+            this.VolumeUpSpeakersRadioButton.Text = "Volume +";
+            this.VolumeUpSpeakersRadioButton.UseVisualStyleBackColor = true;
+            this.VolumeUpSpeakersRadioButton.CheckedChanged += new System.EventHandler(this.VolumeUpSpeakersRadioButton_CheckedChanged);
+            // 
+            // OffSpeakersRadioButton
+            // 
+            this.OffSpeakersRadioButton.AutoSize = true;
+            this.OffSpeakersRadioButton.Location = new System.Drawing.Point(9, 118);
+            this.OffSpeakersRadioButton.Name = "OffSpeakersRadioButton";
+            this.OffSpeakersRadioButton.Size = new System.Drawing.Size(48, 21);
+            this.OffSpeakersRadioButton.TabIndex = 11;
+            this.OffSpeakersRadioButton.TabStop = true;
+            this.OffSpeakersRadioButton.Text = "Off";
+            this.OffSpeakersRadioButton.UseVisualStyleBackColor = true;
+            this.OffSpeakersRadioButton.CheckedChanged += new System.EventHandler(this.OffSpeakersRadioButton_CheckedChanged);
+            // 
+            // OnSpeakersRadioButton
+            // 
+            this.OnSpeakersRadioButton.AutoSize = true;
+            this.OnSpeakersRadioButton.Location = new System.Drawing.Point(9, 82);
+            this.OnSpeakersRadioButton.Name = "OnSpeakersRadioButton";
+            this.OnSpeakersRadioButton.Size = new System.Drawing.Size(48, 21);
+            this.OnSpeakersRadioButton.TabIndex = 10;
+            this.OnSpeakersRadioButton.TabStop = true;
+            this.OnSpeakersRadioButton.Text = "On";
+            this.OnSpeakersRadioButton.UseVisualStyleBackColor = true;
+            this.OnSpeakersRadioButton.CheckedChanged += new System.EventHandler(this.OnSpeakersRadioButton_CheckedChanged);
+            // 
+            // BtnExecuteSpeakersCommand
+            // 
+            this.BtnExecuteSpeakersCommand.Location = new System.Drawing.Point(10, 258);
+            this.BtnExecuteSpeakersCommand.Name = "BtnExecuteSpeakersCommand";
+            this.BtnExecuteSpeakersCommand.Size = new System.Drawing.Size(101, 61);
+            this.BtnExecuteSpeakersCommand.TabIndex = 14;
+            this.BtnExecuteSpeakersCommand.Text = "Execute speakers comand";
+            this.BtnExecuteSpeakersCommand.UseVisualStyleBackColor = true;
+            this.BtnExecuteSpeakersCommand.Click += new System.EventHandler(this.BtnExecuteSpeakersCommand_Click);
             // 
             // Form1
             // 
@@ -218,16 +242,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button VolumeDownSpeakersRemoteBtn;
-        private System.Windows.Forms.Button VolumeUpSpeakersRemoteBtn;
-        private System.Windows.Forms.Button OffSpeakersRemoteBtn;
-        private System.Windows.Forms.Button OnSpeakersRemoteBtn;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BtnExecuteTVCommand;
         private System.Windows.Forms.RadioButton VolumeDownTVRadioButton;
         private System.Windows.Forms.RadioButton VolumeUpTvRadioButton;
         private System.Windows.Forms.RadioButton OffTvRadioButton;
         private System.Windows.Forms.RadioButton OnTvRadioButton;
+        private System.Windows.Forms.Button BtnExecuteSpeakersCommand;
+        private System.Windows.Forms.RadioButton VolumeDownSpeakersRadioButton;
+        private System.Windows.Forms.RadioButton VolumeUpSpeakersRadioButton;
+        private System.Windows.Forms.RadioButton OffSpeakersRadioButton;
+        private System.Windows.Forms.RadioButton OnSpeakersRadioButton;
     }
 }
 
