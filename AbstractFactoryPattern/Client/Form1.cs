@@ -40,6 +40,5 @@ namespace Client
             logListBox.Items.Add(slowVehicle.DodgeObstacles());
             logListBox.Items.Add(slowVehicle.MoveSlowly());
         }
-
     }
 }
